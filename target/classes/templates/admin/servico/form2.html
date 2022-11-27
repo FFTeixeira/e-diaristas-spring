@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br" th:replace="~{adminlte3 :: layout (~{::title}, ~{::main}, _, ~{::scripts})}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Serviço</title>
+    </head>
+    <body>
+        <main>
+            <div class="row">
+                <div class="col">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <div class="card-title">Formulário de Serviço</div>
+                        </div>
+                        <div class="card-body">
+                            <form method="POST" th:object="${dto}">                                
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label class="control-label" for="nome">Serviço</label>
+                                            <input type="text" class="form-control is-valid" id="nome" value="Mark"
+                                                   th:field="*{nome}"
+                                                   th:errorclass="is-invalid">                                           
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('nome')}" 
+                                                    th:text="${erro}"                                                    
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorMinimo">Valor mínimo</label>
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validatedInputGroupPrepend">R$</span>
+                                                <input type="text" class="form-control is-valid money" 
+                                                       th:field="*{valorMinimo}"
+                                                       th:errorclass="is-invalid">
+                                            </div>                                           
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorMinimo')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="qtdHoras">Quantidade horas</label>
+                                            <input type="number" class="form-control is-valid"
+                                                   th:field="*{qtdHoras}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('qtdHoras')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="porcentagemComissao">Porcentagem comissão</label>
+                                            <div class="input-group-prepend">                                               
+                                                <input type="number" class="form-control is-valid" 
+                                                   th:field="*{porcentagemComissao}"
+                                                   th:errorclass="is-invalid">
+                                                <span class="input-group-text" id="validatedInputGroupPrepend">%</span>
+                                            </div>
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('porcentagemComissao')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasQuarto">Horas quarto</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{horasQuarto}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasQuarto')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorQuarto">Valor quarto</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorQuarto}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorQuarto')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasSala">Horas sala</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{horasSala}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasSala')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorSala">Valor sala</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorSala}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorSala')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasBanheiro">Horas banheiro</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{horasBanheiro}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasBanheiro')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorBanheiro">Valor banheiro</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorBanheiro}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorBanheiro')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasCozinha">Horas cozinha</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{horasCozinha}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasCozinha')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorCozinha">Valor cozinha</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorCozinha}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorCozinha')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasQuintal">Horas quintal</label>
+                                            <input type="number" class="form-control is-valid"
+                                                   th:field="*{horasQuintal}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasQuintal')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorQuintal">Valor quintal</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorQuintal}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorQuintal')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="horasOutros">Horas outros</label>
+                                            <input type="number" class="form-control is-valid"
+                                                   th:field="*{horasOutros}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('horasOutros')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="valorOutros">Valor outros</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{valorOutros}"
+                                                   th:errorclass="is-invalid">
+                                            <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorOutros')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="icone">Ícone</label>
+                                            <select class="form-control" th:field="*{icone}">
+                                                <option th:each="icone : ${icones}" th:text="${icone.nome}" th:value="${icone}"></option>
+                                            </select>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="posicao">Posição</label>
+                                            <input type="number" class="form-control is-valid" 
+                                                   th:field="*{posicao}"
+                                                   th:errorclass="is-invalid">
+                                             <ul>
+                                                <li class="text-danger" 
+                                                    th:each="erro : ${#fields.errors('valorOutros')}" 
+                                                    th:text="${erro}"
+                                                ></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-success">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <th:block th:fragment="scripts">
+            <script th:src="@{/webjars/jquery-mask-plugin/dist/jquery.mask.min.js}"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.money').mask('#.##0,00', {reverse: true});
+                })
+            </script>
+        </th:block>
+    </body>
+</html>

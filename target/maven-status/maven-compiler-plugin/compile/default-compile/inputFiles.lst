@@ -1,0 +1,9 @@
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/dto/ServicoDTO.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/services/WebServicoService.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/EDiaristasApplication.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/controllers/ServicoController.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/exceptions/ServicoNaoEncontradoException.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/mappers/WebServicoMapper.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/models/Servico.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/repositories/ServicoRepository.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/enums/Icone.java
