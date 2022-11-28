@@ -10,6 +10,8 @@
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/controllers/UsuarioController.java
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/services/WebUsuarioService.java
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/controllers/ServicoController.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/mappers/WebUsuarioMapper.java
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/repositories/ServicoRepository.java
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/repositories/UsuarioRepository.java
 /home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/core/enums/Icone.java
+/home/fernando/Workspaces/ws-vsc/Treinaweb/e-diaristas/src/main/java/br/com/treinaweb/ediaristas/web/dto/UsuarioDTO.java
